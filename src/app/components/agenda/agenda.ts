@@ -6,6 +6,7 @@ interface AgendaItem {
   location?: string;
 }
 
+
 @Component({
   selector: 'app-agenda',
   imports: [],
@@ -13,6 +14,9 @@ interface AgendaItem {
   styleUrl: './agenda.css',
 })
 export class Agenda {
+
+  today = new Date().toISOString().slice(0, 10);
+
   agendaItems: AgendaItem[] = [
     {
       time: '09:00 AM',
