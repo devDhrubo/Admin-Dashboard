@@ -1,0 +1,41 @@
+<div class="text-sm font-semibold text-slate-800 mb-3">
+    Weather
+  </div>
+
+  <!-- Weather icon card -->
+  <div
+    class="rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center
+           h-16 mb-4"
+  >
+    <span class="material-icons text-5xl text-slate-600">
+      {{ weather.icon }}
+    </span>
+  </div>
+
+  <!-- Temperature -->
+  <div class="text-3xl font-semibold text-slate-900 mb-1">
+    {{ weather.temperature }}°C
+  </div>
+
+  <!-- Condition -->
+  <div class="text-sm text-slate-500 mb-2">
+    {{ weather.condition }}
+  </div>
+
+  <!-- Location -->
+  <div class="text-xs text-slate-400 mb-4">
+    {{ weather.location }}
+  </div>
+
+  <!-- Stats -->
+  <div class="space-y-2 text-xs">
+
+    @for (stat of weather.stats; track stat) {
+      <div class="flex justify-between border-b border-slate-100 pb-1">
+        <span class="text-slate-500">{{ stat.label }}</span>
+        <span class="font-medium text-slate-700">{{ stat.value }}</span>
+      </div>
+    }
+
+  </div>
+

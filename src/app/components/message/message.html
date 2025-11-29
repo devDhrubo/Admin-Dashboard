@@ -1,0 +1,40 @@
+<div class="text-sm font-semibold text-slate-800 mb-3">
+    Messages
+  </div>
+
+  <!-- Message list -->
+  <div class="space-y-3">
+
+    @for (msg of messages; track msg) {
+
+      <div
+        class="flex items-start gap-3 border border-slate-200 rounded-xl p-3
+               hover:bg-slate-50 transition"
+      >
+
+        <div
+          class="h-9 w-9 rounded-full bg-slate-900 text-white flex items-center justify-center
+                 text-xs font-semibold"
+        >
+          {{ msg.avatar }}
+        </div>
+
+        <!-- Text Content -->
+        <div class="flex-1">
+          <div class="text-sm font-medium text-slate-800">
+            {{ msg.user }}
+          </div>
+
+          <div class="text-xs text-slate-500 mt-0.5">
+            {{ msg.text }}
+          </div>
+        </div>
+
+        <!-- Time -->
+        <div class="text-[10px] text-slate-400 whitespace-nowrap">
+          {{ msg.time }}
+        </div>
+      </div>
+    }
+
+  </div>

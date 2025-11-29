@@ -1,0 +1,35 @@
+  <div class="flex items-center justify-between mb-3">
+    <div class="text-sm font-semibold text-slate-800">
+      News
+    </div>
+
+    <button
+      type="button"
+      class="h-8 w-8 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 cursor-pointer"
+    >
+      <span class="material-icons text-slate-600 text-base">
+        refresh
+      </span>
+    </button>
+  </div>
+
+  <!-- News list -->
+  <div class="space-y-3 text-xs">
+
+    @for (item of news; track item) {
+      <div
+        class="border border-slate-200 rounded-xl px-3 py-2.5
+               hover:bg-slate-50 transition cursor-pointer"
+      >
+        <div class="text-[13px] font-medium text-slate-800 mb-1">
+          {{ item.title }}
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400">
+          <span>{{ item.source }}</span>
+          <span>{{ item.time }}</span>
+        </div>
+      </div>
+    }
+
+  </div>

@@ -1,0 +1,6 @@
+/*flex items-center gap-2*/
+.flex-step{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
